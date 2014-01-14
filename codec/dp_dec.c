@@ -44,6 +44,10 @@
 #define LOOP_ALIGN
 #endif
 
+#ifdef _MSC_VER
+#define inline __inline
+#endif
+
 static inline int32_t ALWAYS_INLINE sign_of_int( int32_t i )
 {
     int32_t negishift;
