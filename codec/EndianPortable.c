@@ -38,6 +38,8 @@
 #define TARGET_RT_LITTLE_ENDIAN 1
 #elif defined(__x86_64__)
 #define TARGET_RT_LITTLE_ENDIAN 1
+#elif defined (__arm__) || defined (__arm64__) || defined(__aarch64__)
+#define TARGET_RT_LITTLE_ENDIAN 1
 #elif defined (TARGET_OS_WIN32)
 #define TARGET_RT_LITTLE_ENDIAN 1
 #endif
