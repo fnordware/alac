@@ -312,7 +312,7 @@ int32_t dyn_decomp( AGParamRecPtr params, BitBuffer * bitstream, int32_t * pc, i
         // least significant bit is sign bit
         {
         	uint32_t	ndecode = n + zmode;
-            int32_t		multiplier = (- (ndecode&1));
+            int32_t		multiplier = (- (int32_t)(ndecode&1));
 
             multiplier |= 1;
             del = ((ndecode+1) >> 1) * (multiplier);
